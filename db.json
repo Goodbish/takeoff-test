@@ -1,0 +1,128 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "name": "Daniel",
+      "username": "admin",
+      "password": "123",
+      "role": "admin"
+    },
+    {
+      "id": 1,
+      "name": "TestUser",
+      "username": "test",
+      "password": "test",
+      "role": "user"
+    },
+    {
+      "name": "Андрей",
+      "username": "andrey",
+      "password": "andrey",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "name": "Гриша",
+      "username": "Grisha",
+      "password": "grisha",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "name": "Алина",
+      "username": "alina",
+      "password": "alina",
+      "role": "user",
+      "id": 4
+    },
+    {
+      "name": "hello",
+      "username": "hello",
+      "password": "123",
+      "role": "user",
+      "id": 5
+    },
+    {
+      "name": "Random1",
+      "username": "random1",
+      "password": "123",
+      "role": "user",
+      "id": 6
+    },
+    {
+      "name": "Random2",
+      "username": "random2",
+      "password": "123",
+      "role": "user",
+      "id": 7
+    },
+    {
+      "name": "Random3",
+      "username": "random3",
+      "password": "123",
+      "role": "user",
+      "id": 8
+    },
+    {
+      "name": "Random4",
+      "username": "random4",
+      "password": "123",
+      "role": "user",
+      "id": 9
+    },
+    {
+      "name": "Random5",
+      "username": "random5",
+      "password": "123",
+      "role": "user",
+      "id": 10
+    },
+    {
+      "name": "Random6",
+      "username": "random6",
+      "password": "123",
+      "role": "user",
+      "id": 11
+    },
+    {
+      "name": "Random7",
+      "username": "random7",
+      "password": "123",
+      "role": "user",
+      "id": 12
+    },
+    {
+      "name": "Random8",
+      "username": "random8",
+      "password": "123",
+      "role": "user",
+      "id": 13
+    }
+  ],
+  "people": [
+    {
+      "id": 0,
+      "name": "Mike",
+      "phone": "111-222-333",
+      "email": "mike@mail.ru"
+    },
+    {
+      "name": "Mark",
+      "phone": "+7 922 320 86 50",
+      "email": "seysreyn@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Даниил3",
+      "phone": "444-555-666",
+      "email": "mail@test.ru",
+      "id": 2
+    },
+    {
+      "name": "Андрей",
+      "phone": "7 922 3208650",
+      "email": "test@test.ru",
+      "id": 3
+    }
+  ]
+}

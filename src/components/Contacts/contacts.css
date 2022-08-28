@@ -1,0 +1,9 @@
+.card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card__title {
+    margin-bottom: 20px;
+}
