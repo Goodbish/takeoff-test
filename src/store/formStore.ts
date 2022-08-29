@@ -12,6 +12,7 @@ class FormStore {
     isLogged: boolean = false
     users: User[] = []
     currentUser!: User
+    currentUserId!: number
 
     constructor() {
         makeAutoObservable(this)

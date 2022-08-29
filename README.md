@@ -17,7 +17,9 @@ Runs the app in the development mode **AND** json-server
 
 Available accounts are in db.json in users array
 Working account:
-login: admin
-password: 123
+
+**login**: admin
+
+**password**: 123
 
 Also you can register account and login right away

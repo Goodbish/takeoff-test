@@ -79,7 +79,7 @@ export default class Register extends React.Component {
                     </Button>
                     <Box>
                         <Link to="/">
-                            <LinkMui>Already have an account? Sign in</LinkMui>
+                            <LinkMui component="span">Already have an account? Sign in</LinkMui>
                         </Link>
                     </Box>
                 </Box>

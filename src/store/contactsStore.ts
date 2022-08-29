@@ -8,7 +8,8 @@ interface Contact {
 }
 
 class ContactStore {
-    people: Contact[] = []
+    contacts: Contact[] = []
+    currentUserId!: number
     openDialog: boolean = false
     dialogTitle: string = ''
     openSnack: boolean = false
@@ -25,12 +26,12 @@ class ContactStore {
         makeAutoObservable(this)
     }
 
-    getUsersArray() {
-        fetch(`http://localhost:3003/people`)
+    getContactsArray() {
+        fetch(`http://localhost:3003/contacts?userId=${this.currentUserId}`)
         .then(res => res.json())
         .then(
             (result) => {
-                this.people = result
+                this.contacts = result
                 return result
             },
             (error) => {

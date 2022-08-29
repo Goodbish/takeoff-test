@@ -9,7 +9,7 @@ const DialogDelete = () => {
     const deleteContact = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const form = new FormData(event.currentTarget);
-        fetch(`http://localhost:3003/people/${form.get('id')}`, {
+        fetch(`http://localhost:3003/contacts/${form.get('id')}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -20,7 +20,7 @@ const DialogDelete = () => {
             (result) => {
                 contactsStore.openSnack = true;
                 contactsStore.snackMessage = 'Contact deleted';
-                contactsStore.getUsersArray();
+                contactsStore.getContactsArray();
                 contactsStore.openDialog = false;
                 console.log(result);
             },

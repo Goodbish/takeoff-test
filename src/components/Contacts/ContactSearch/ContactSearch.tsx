@@ -9,7 +9,7 @@ const ContactSearch = () => {
     const debounceSearch = (value: string) => {
         clearTimeout(filterTimeout)
         if (!value) {
-            contactsStore.getUsersArray();
+            contactsStore.getContactsArray();
             return
         }
 
@@ -19,11 +19,11 @@ const ContactSearch = () => {
     }
 
     const applySearch = (value: string) => {
-        fetch(`http://localhost:3003/people?q=${value}`)
+        fetch(`http://localhost:3003/contacts?userId=${contactsStore.currentUserId}&q=${value}`)
         .then(res => res.json())
         .then(
             (result) => {
-                contactsStore.people = result
+                contactsStore.contacts = result
                 return result
             },
             (error) => {

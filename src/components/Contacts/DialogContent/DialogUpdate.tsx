@@ -13,6 +13,7 @@ const DialogUpdate = () => {
             name: form.get('name'),
             phone: form.get('phone'),
             email: form.get('email'),
+            userId: contactsStore.currentUserId
         }
         if (data.name === contactsStore.currentCardProps.name &&
             data.email === contactsStore.currentCardProps.email &&
@@ -23,7 +24,7 @@ const DialogUpdate = () => {
                 return
         }
 
-        fetch(`http://localhost:3003/people/${form.get('id')}`, {
+        fetch(`http://localhost:3003/contacts/${form.get('id')}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -35,7 +36,7 @@ const DialogUpdate = () => {
             (result) => {
                 contactsStore.openSnack = true;
                 contactsStore.snackMessage = 'Contact edited';
-                contactsStore.getUsersArray();
+                contactsStore.getContactsArray();
                 contactsStore.openDialog = false;
                 console.log(result);
             },

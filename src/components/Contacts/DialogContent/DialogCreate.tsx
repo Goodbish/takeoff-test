@@ -13,8 +13,9 @@ const DialogCreate = () => {
             name: form.get('name'),
             phone: form.get('phone'),
             email: form.get('email'),
+            userId: contactsStore.currentUserId
         }
-        fetch(`http://localhost:3003/people`, {
+        fetch(`http://localhost:3003/contacts?userId=${contactsStore.currentUserId}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -26,7 +27,7 @@ const DialogCreate = () => {
             (result) => {
                 contactsStore.openSnack = true;
                 contactsStore.snackMessage = 'Contact added';
-                contactsStore.getUsersArray();
+                contactsStore.getContactsArray();
                 contactsStore.openDialog = false;
             },
             (error) => {

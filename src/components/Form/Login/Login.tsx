@@ -18,7 +18,8 @@ const Login = observer(() => {
                     formStore.loggingEvent();
                     formStore.currentUser = result[0];
                     // get contacts in mobx state
-                    contactsStore.getUsersArray();
+                    contactsStore.currentUserId = result[0].id;
+                    contactsStore.getContactsArray();
                 } else {
                     formStore.showError();
                 }
@@ -65,7 +66,7 @@ const Login = observer(() => {
                 </Button>
                 <Box>
                     <Link to="/sign-up">
-                        <LinkMui>Don't have an account? Sign Up</LinkMui>
+                        <LinkMui component="span">Don't have an account? Sign Up</LinkMui>
                     </Link>
                 </Box>
             </Box>
