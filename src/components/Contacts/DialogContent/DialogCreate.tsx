@@ -1,46 +1,10 @@
 import { Box, TextField, Button, DialogActions } from "@mui/material"
 import contactsStore from "../../../store/contactsStore"
+import InterfaceStore from "../../../store/InterfaceStore";
 
 const DialogCreate = () => {
-    const handleClose = () => {
-        contactsStore.openDialog = false;
-    };
-
-    const createContact = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        const form = new FormData(event.currentTarget);
-        const data = {
-            name: form.get('name'),
-            phone: form.get('phone'),
-            email: form.get('email'),
-            userId: contactsStore.currentUserId
-        }
-        fetch(`http://localhost:3003/contacts?userId=${contactsStore.currentUserId}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-        .then(res => res.json())
-        .then(
-            (result) => {
-                contactsStore.openSnack = true;
-                contactsStore.snackMessage = 'Contact added';
-                contactsStore.getContactsArray();
-                contactsStore.openDialog = false;
-            },
-            (error) => {
-                contactsStore.openSnack = true;
-                contactsStore.snackMessage = 'Something went wrong'
-                console.log(error);
-                contactsStore.openDialog = false;
-            }
-        )
-    }
-
     return (
-        <Box component="form" sx={{ mt: 1, padding: '0 24px' }} onSubmit={createContact}>
+        <Box component="form" sx={{ mt: 1, padding: '0 24px' }} onSubmit={contactsStore.createContact}>
             <TextField
                 margin="normal"
                 required
@@ -71,7 +35,7 @@ const DialogCreate = () => {
                 defaultValue={''}
             />
             <DialogActions>
-                <Button onClick={handleClose}>Close</Button>
+                <Button onClick={InterfaceStore.closeDialog}>Close</Button>
                 <Button type="submit" variant="contained">Add new contact</Button>
             </DialogActions>
         </Box>

@@ -13,6 +13,48 @@
       "username": "test",
       "password": "test",
       "role": "user"
+    },
+    {
+      "name": "user",
+      "username": "user",
+      "password": "123",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "name": "newUser",
+      "username": "Gregor",
+      "password": "123",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "name": "gregor",
+      "username": "Gregor",
+      "password": "123",
+      "role": "user",
+      "id": 4
+    },
+    {
+      "name": "Mike2",
+      "username": "Mikeeee",
+      "password": "123",
+      "role": "user",
+      "id": 5
+    },
+    {
+      "name": "test3",
+      "username": "test3",
+      "password": "123",
+      "role": "user",
+      "id": 6
+    },
+    {
+      "name": "test4",
+      "username": "test4",
+      "password": "123",
+      "role": "user",
+      "id": 7
     }
   ],
   "contacts": [
@@ -24,11 +66,11 @@
       "email": "mike@mail.ru"
     },
     {
-      "id": 1,
-      "userId": 0,
-      "name": "Mark",
+      "name": "Mark2",
       "phone": "+7 922 320 86 50",
-      "email": "seysreyn@gmail.com"
+      "email": "seysreyn@gmail.com",
+      "userId": 0,
+      "id": 1
     },
     {
       "id": 2,

@@ -4,6 +4,7 @@ import formStore from "../store/formStore";
 import Contacts from "./Contacts/Contacts";
 import React from "react";
 import Header from "./Header/Header";
+import InterfaceControl from "./InterfaceControl/InterfaceControl";
 
 const LoggedComponents = () => {
     return (
@@ -22,7 +23,11 @@ const RenderApp = observer(() => {
 class App extends React.Component {
     render() {
         return(
+            <>
             <RenderApp/>
+            <InterfaceControl/>
+            </>
+            
         )
     }
 }

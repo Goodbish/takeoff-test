@@ -6,6 +6,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
 import contactsStore from "../../../store/contactsStore"
+import InterfaceStore from "../../../store/InterfaceStore";
 
 interface PeopleObject {
     cardProps: { id: number, name: string, phone: string, email: string }
@@ -13,16 +14,16 @@ interface PeopleObject {
 
 const ContactCard = observer(({cardProps}: PeopleObject) => {
     const editClick = () => {
-        contactsStore.dialogContent = 'update';
-        contactsStore.openDialog = true;
-        contactsStore.dialogTitle = `Edit ${cardProps.name} card`;
+        InterfaceStore.dialogContent = 'update';
+        InterfaceStore.openDialog = true;
+        InterfaceStore.dialogTitle = `Edit ${cardProps.name} card`;
         contactsStore.currentCardProps = cardProps;
     }
 
     const deleteClick = () => {
-        contactsStore.dialogContent = 'delete';
-        contactsStore.openDialog = true;
-        contactsStore.dialogTitle = `Delete ${cardProps.name} card?`;
+        InterfaceStore.dialogContent = 'delete';
+        InterfaceStore.openDialog = true;
+        InterfaceStore.dialogTitle = `Delete ${cardProps.name} card?`;
         contactsStore.currentCardProps = cardProps;
     }
 

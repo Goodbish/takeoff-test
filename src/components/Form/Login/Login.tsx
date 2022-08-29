@@ -6,36 +6,12 @@ import contactsStore from "../../../store/contactsStore";
 import formStore from "../../../store/formStore";
 
 const Login = observer(() => {
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        fetch(`http://localhost:3003/users?username=${data.get('username')}&password=${data.get('password')}`)
-        .then(res => res.json())
-        .then(
-            (result) => {
-                if (result.length !== 0) {
-                    formStore.hideError();
-                    formStore.loggingEvent();
-                    formStore.currentUser = result[0];
-                    // get contacts in mobx state
-                    contactsStore.currentUserId = result[0].id;
-                    contactsStore.getContactsArray();
-                } else {
-                    formStore.showError();
-                }
-            },
-            (error) => {
-              console.log('Some error happened', error);
-            }
-        )
-    }
-
     return (
         <>
             <Typography variant="h1" component="h2">
                 Sign in
             </Typography>
-            <Box component="form" noValidate sx={{ mt: 1 }} onSubmit={handleSubmit}>
+            <Box component="form" noValidate sx={{ mt: 1 }} onSubmit={formStore.loginEvent}>
                 <TextField
                     margin="normal"
                     required
