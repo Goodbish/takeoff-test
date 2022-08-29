@@ -3,16 +3,11 @@ import { observer } from 'mobx-react';
 import InterfaceStore from '../../../store/InterfaceStore';
 
 const AppSnackBar = observer(() => {
-    const handleSnackClose = () => {
-        InterfaceStore.openSnack = false;
-        InterfaceStore.snackMessage = '';
-    }
-
     return (
         <Snackbar
             open={InterfaceStore.openSnack}
             autoHideDuration={3000}
-            onClose={handleSnackClose}
+            onClose={InterfaceStore.closeSnack}
             message={InterfaceStore.snackMessage}
         />
     )
