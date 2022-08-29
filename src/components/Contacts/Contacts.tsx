@@ -18,9 +18,9 @@ const Contacts = () => {
             display: 'flex',
             flexDirection: 'column',
             rowGap: '20px',
-            maxHeight: '100vh',
+            maxHeight: 'calc(100vh - 224px)',
             justifyContent: 'center',
-            margin: '150px auto'
+            margin: '150px auto 0'
         }}>
             <ContactSearch/>
             <Button variant="outlined" onClick={handleClickOpen}>

@@ -6,10 +6,6 @@ import DialogDelete from "../../Contacts/DialogContent/DialogDelete";
 import DialogUpdate from "../../Contacts/DialogContent/DialogUpdate";
 
 const AppDialog = observer(() => {
-    const handleClose = () => {
-        InterfaceStore.openDialog = false;
-    };
-
     const dialogContentSwitch = () => {
         switch(InterfaceStore.dialogContent) {
             case 'create': 
@@ -24,7 +20,7 @@ const AppDialog = observer(() => {
     }
   
     return (
-      <Dialog onClose={handleClose} open={InterfaceStore.openDialog}>
+      <Dialog onClose={InterfaceStore.closeDialog} open={InterfaceStore.openDialog}>
         <DialogTitle>{InterfaceStore.dialogTitle}</DialogTitle>
         <List sx={{ pt: 0 }}>
             {dialogContentSwitch()}

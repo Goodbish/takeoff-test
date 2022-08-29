@@ -13,6 +13,13 @@ class InterfaceStore {
 
     closeDialog = () => {
         this.openDialog = false;
+        this.dialogTitle = '';
+        this.dialogContent = '';
+    }
+
+    closeSnack = ()  => {
+        this.openSnack = false;
+        this.snackMessage = '';
     }
 }
 

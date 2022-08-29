@@ -7,3 +7,13 @@
 .card__title {
     margin-bottom: 20px;
 }
+
+.card__list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    row-gap: 20px;
+    overflow: auto;
+    padding: 10px;
+    margin: 20px -10px 100px;
+}

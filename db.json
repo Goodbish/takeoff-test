@@ -85,13 +85,6 @@
       "name": "Андрей",
       "phone": "7 922 3208650",
       "email": "test@test.ru"
-    },
-    {
-      "name": "Henry23",
-      "phone": "4444-55544-32",
-      "email": "nar115@mail.ru",
-      "userId": 0,
-      "id": 4
     }
   ]
 }

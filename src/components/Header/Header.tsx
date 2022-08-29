@@ -13,7 +13,7 @@ const Header = () => {
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                             {formStore.currentUser.name}
                         </Typography>
-                        <Button color="inherit" onClick={() => {formStore.logOut()}}>Logout</Button>
+                        <Button color="inherit" onClick={formStore.logOut}>Logout</Button>
                     </Box>
                 </Toolbar>
             </AppBar>
